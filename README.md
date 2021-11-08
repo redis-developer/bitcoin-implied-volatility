@@ -41,9 +41,14 @@ Install the below dependencies in requirements.txt in venv
 
 ```
  pip3 install -r requirements.txt`
+
 ```
 
-### Step 4.  Execute the script
+### Step 4. Create a LedgeX API key
+
+Create a LedgerX api key (https://app.ledgerx.com/profile/api-keys) and copy to a file in root of project named "secret"
+
+### Step 5.  Execute the script
 
 Run `ledgerx_ws.py` which is the script consuming the websocket stream from LedgerX 
 
