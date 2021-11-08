@@ -1,5 +1,8 @@
 # Live BTC Implied Volatility Charts
 
+![image](https://user-images.githubusercontent.com/313480/140698710-91c1e568-7825-46ad-9656-086c3dae32c5.png)
+
+
 Using LedgerX public websocket API we're able to demonstrate using Redis as a multipurpose datastore.
 Using a server side Lua script to check the received updates counter we can appropriately publish PUBSUB messages to the
 listening [Bokeh](https://docs.bokeh.org/en/latest/) app and store the bid/ask prices to a 
@@ -7,6 +10,9 @@ listening [Bokeh](https://docs.bokeh.org/en/latest/) app and store the bid/ask p
 
 The Bokeh app displays the implied volatility calculated from the best bid and offer prices received over websocket.
 We're using the Black-Scholes formula implemented by the [vollib](http://vollib.org/) library.
+
+![image](https://user-images.githubusercontent.com/313480/140698675-08c8728f-a92b-426f-9552-aeb9bdfa22fd.png)
+
 
 We get the price of bitcoin from polling the coinbase API every 3 seconds.
 
@@ -53,6 +59,9 @@ the local URL.
 ```bash
   bokeh serve --show iv_app.py
 ```
+
+![image](https://user-images.githubusercontent.com/313480/140698568-d92a7020-db73-47b9-ad2a-fc896d52c897.png)
+
 
 There are pre-cache files `contracts.pkl` and `id_table.json` which are loaded so no authenticated requests are needed.
 If you have a LedgerX account and API key, you can create a file named `secret` with the API key on the first line which
