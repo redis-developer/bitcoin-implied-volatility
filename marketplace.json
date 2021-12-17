@@ -14,7 +14,7 @@
   ],
   "redis_commands": [],
   "redis_features": [
-   "Redis PubSub"   
+   "Pub/Sub"   
   ],
   "redis_modules": [
     "RedisTimeSeries"
