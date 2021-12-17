@@ -1,4 +1,4 @@
-# Live BTC Implied Volatility Charts
+# Live Bitcoin Implied Volatility Charts
 
 ![image](https://user-images.githubusercontent.com/313480/140698710-91c1e568-7825-46ad-9656-086c3dae32c5.png)
 
