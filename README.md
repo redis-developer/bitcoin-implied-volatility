@@ -34,7 +34,7 @@ Thhis will run both Redis and Redis modules like [RedisTimeSeries](https://oss.r
 ### Step 2. Clone the repository
 
 ```
- git clone https://github.com/redis-developer/implied-vol-plot
+ git clone https://github.com/redis-developer/bitcon-implied-volatility
 ```
 
 ### Step 3. Install the dependencies
