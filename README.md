@@ -2,6 +2,8 @@
 
 ![image](https://user-images.githubusercontent.com/313480/140698710-91c1e568-7825-46ad-9656-086c3dae32c5.png)
 
+Implied volatility (IV) is basically a metric used to forecast what the market thinks about the future price movements of an option's underlying stock. IV is a dynamic figure that changes based on activity in the options marketplace. Usually, when implied volatility increases, the price of options will increase as well, assuming all other things remain constant. When implied volatility increases after a trade has been placed, it’s good for the option owner and bad for the option seller. IV is useful because it offers traders a general range of prices that a security is anticipated to swing between and helps indicate good entry and exit points. IV isn’t based on historical pricing data on the stock. Instead, it’s what the marketplace is “implying” the volatility of the stock will be in the future, based on price changes in an option. 
+
 
 Using LedgerX public websocket API we're able to demonstrate using Redis as a multipurpose datastore.
 Using a server side Lua script to check the received updates counter we can appropriately publish PUBSUB messages to the
