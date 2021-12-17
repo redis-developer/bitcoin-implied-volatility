@@ -1,0 +1,31 @@
+{
+  "app_name": "Implied Volatility",
+  "description": "Live BTC Implied Volatility Charts using Redis Pub/Sub and RedisTimeSeries",
+  "type": "Building Block",
+  "contributed_by": "Community",
+  "repo_url": "https://github.com/redis-developer/implied-volatility",
+  "preview_image_url": "https://raw.githubusercontent.com/redis-developer/impled-volatility/main/images/app_preview_image.png",
+  "download_url": "https://github.com/redis-developer/implied-volatility/archive/refs/heads/main.zip",
+  "hosted_url": "",
+  "quick_deploy": "false",
+  "deploy_buttons": [],
+  "language": [
+    "JavaScript"
+  ],
+  "redis_commands": [],
+  "redis_features": [
+   "Redis PubSub"   
+  ],
+  "redis_modules": [
+    "RedisTimeSeries"
+  ],
+  "app_image_urls": [],
+  "youtube_url": "https://www.youtube.com/watch?v=d7sPAdy142k",
+  "special_tags": [
+    "Hackathon"
+  ],
+  "verticals": [
+    "Others"
+  ],
+  "markdown": "https://raw.githubusercontent.com/redis-developer/implied-volatility/main/README.md"
+}
