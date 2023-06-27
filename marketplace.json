@@ -1,6 +1,6 @@
 {
   "app_name": "Bitcoin Implied Volatility",
-  "description": "Live Bitcoin Implied Volatility Charts using Redis Pub/Sub and RedisTimeSeries",
+  "description": "Live Bitcoin Implied Volatility Charts using Redis Pub/Sub and Time Series",
   "type": "Building Block",
   "contributed_by": "Community",
   "repo_url": "https://github.com/redis-developer/implied-volatility",
@@ -13,11 +13,11 @@
     "JavaScript"
   ],
   "redis_commands": [],
-  "redis_features": [
-   "Pub/Sub"   
+  "redis_use_cases": [
+    "Pub/Sub"
   ],
-  "redis_modules": [
-    "RedisTimeSeries"
+  "redis_features": [
+    "Time Series"
   ],
   "app_image_urls": [],
   "youtube_url": "https://www.youtube.com/watch?v=w-wb_zzz8is",
