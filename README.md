@@ -2,13 +2,13 @@
 
 ![image](https://user-images.githubusercontent.com/313480/140698710-91c1e568-7825-46ad-9656-086c3dae32c5.png)
 
-Implied volatility (IV) is basically a metric used to forecast what the market thinks about the future price movements of an option's underlying stock. IV is a dynamic figure that changes based on activity in the options marketplace. Usually, when implied volatility increases, the price of options will increase as well, assuming all other things remain constant. When implied volatility increases after a trade has been placed, it’s good for the option owner and bad for the option seller. IV is useful because it offers traders a general range of prices that a security is anticipated to swing between and helps indicate good entry and exit points. IV isn’t based on historical pricing data on the stock. Instead, it’s what the marketplace is “implying” the volatility of the stock will be in the future, based on price changes in an option. 
+Implied volatility (IV) is basically a metric used to forecast what the market thinks about the future price movements of an option's underlying stock. IV is a dynamic figure that changes based on activity in the options marketplace. Usually, when implied volatility increases, the price of options will increase as well, assuming all other things remain constant. When implied volatility increases after a trade has been placed, it’s good for the option owner and bad for the option seller. IV is useful because it offers traders a general range of prices that a security is anticipated to swing between and helps indicate good entry and exit points. IV isn’t based on historical pricing data on the stock. Instead, it’s what the marketplace is “implying” the volatility of the stock will be in the future, based on price changes in an option.
 
 
 Using LedgerX public websocket API we're able to demonstrate using Redis as a multipurpose datastore.
 Using a server side Lua script to check the received updates counter we can appropriately publish PUBSUB messages to the
-listening [Bokeh](https://docs.bokeh.org/en/latest/) app and store the bid/ask prices to a 
-[RedisTimeSeries](https://oss.redislabs.com/redistimeseries/) data type atomically.
+listening [Bokeh](https://docs.bokeh.org/en/latest/) app and store the bid/ask prices to a
+[Redis Time Series](https://oss.redislabs.com/redistimeseries/) data type atomically.
 
 The Bokeh app displays the implied volatility calculated from the best bid and offer prices received over websocket.
 We're using the Black-Scholes formula implemented by the [vollib](http://vollib.org/) library.
@@ -82,7 +82,7 @@ The subscriber will recieve JSON encoded messages with the contract id, best bid
  docker run -d -p 6379:6379 redislabs/redismod
 ```
 
-Thhis will run both Redis and Redis modules like [RedisTimeSeries](https://oss.redislabs.com/redistimeseries/)
+Thhis will run both Redis and Redis modules like [Redis Time Series](https://oss.redislabs.com/redistimeseries/)
 
 ### Step 2. Clone the repository
 
@@ -105,7 +105,7 @@ Create a LedgerX api key (https://app.ledgerx.com/profile/api-keys) and copy to 
 
 ### Step 5.  Execute the script
 
-Run `ledgerx_ws.py` which is the script consuming the websocket stream from LedgerX 
+Run `ledgerx_ws.py` which is the script consuming the websocket stream from LedgerX
 
 ```
  python3 ledgerx_ws.py
@@ -135,14 +135,14 @@ will enable authenticated API queries.
 - Run the command to avoid background save failure under low memory condition
 
 ```bash
-  sysctl vm.overcommit_memory=1 
+  sysctl vm.overcommit_memory=1
 ```
 
 - Install docker-compose: https://docs.docker.com/compose/install/
 
 If you don't configure docker to be used without sudo you'll have to add sudo in front of any docker command
 
-- To build image: 
+- To build image:
 
 ```
  sudo docker build -t iv_app:dev .`
@@ -158,13 +158,13 @@ If you don't configure docker to be used without sudo you'll have to add sudo in
 
 ### Using Docker-compose
 
-- To start services: 
+- To start services:
 `docker-compose up` #can add -d flag to run in background
 
-- To stop services: 
+- To stop services:
 
 `docker-compose down`
 
-To run a specific service interactively: 
+To run a specific service interactively:
 
 `docker-compose exec <name-of-service-in-docker-compose-yaml> sh`
